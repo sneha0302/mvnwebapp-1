@@ -19,8 +19,8 @@ jobs:
         uses: zaproxy/action-full-scan@v0.2.0
         with:
           #token: ${{ secrets.GITHUB_TOKEN }}
-          #docker_name: 'owasp/zap2docker-stable'
+          docker_name: 'owasp/zap2docker-stable'
           target: 'http://demo.testfire.net/'
-          #rules_file_name: '.zap/rules.tsv'
+          rules_file_name: '.zap/rules.tsv'
           #cmd_options: '-a'
 
