@@ -1,7 +1,6 @@
 name: fortify-ci-tools FoD scan
 
-on: 
-  workflow_dispatch:
+on: push
   
 jobs:
   FoD-SAST-Scan:
