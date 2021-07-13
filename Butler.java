@@ -11,6 +11,7 @@ public class Butler {
         list1.add("Hello");
         ArrayList<String> list2 = new ArrayList<String>();
         list2.add("World");
+        String password= 'password';
 
         System.out.println(ListUtils.union(list1, list2));
     }
