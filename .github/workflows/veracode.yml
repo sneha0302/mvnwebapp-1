@@ -40,5 +40,5 @@ jobs:
         sandboxname: 'DevSandboxMVN'
         scantimeout: 15
         exclude: '*.js'
-        include: '*.jar'
+        include: '*'
         criticality: 'VeryHigh'
