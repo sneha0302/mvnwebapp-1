@@ -34,8 +34,8 @@ jobs:
         appname: MvnJavaApp
         createprofile: 'false'
         filepath:  ${{ github.workspace }}
-        vid: '4905bcca18f59210a00bb7c814eda8f9' #'${{ secrets.VERACODE_API_ID }}'
-        vkey: '08e3ee05a5ff44119b18e63dc8cac1892f32303c440b3c067ccd7e84bc50336df4d8563cdfb29f59c735e942769c0a453b9d8da576165e7bd55346fcf5a4d122' #'${{ secrets.VERACODE_API_KEY }}'
+        vid: '${{ secrets.VERACODE_API_ID }}'
+        vkey: '${{ secrets.VERACODE_API_KEY }}'
         createsandbox: 'false'
         sandboxname: 'DevSandboxMVN'
         scantimeout: 15
