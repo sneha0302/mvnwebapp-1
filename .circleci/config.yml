@@ -7,6 +7,7 @@ jobs:
       - image: 'cimg/node:lts'
     steps:
       - checkout
+      - run: install npm@5
       - run: npm ci
       - snyk/scan:
           fail-on-issues: false
