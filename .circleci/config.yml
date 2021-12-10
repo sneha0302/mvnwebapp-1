@@ -1,4 +1,4 @@
-version: 2.1
+version: '2.1'
 orbs:
   snyk: snyk/snyk@1.1.2
 jobs:
@@ -7,11 +7,10 @@ jobs:
       - image: 'cimg/node:lts'
     steps:
       - checkout
-      - run: install --help
-      #- run: npm ci
+      - run: npm ci
       - snyk/scan:
           fail-on-issues: false
-          monitor-on-build: true
+          monitor-on-build: false
           project: '${CIRCLE_PROJECT_REPONAME}/${CIRCLE_BRANCH}-app'
           severity-threshold: high
           token-variable: API_TOKEN
