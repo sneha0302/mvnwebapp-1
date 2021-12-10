@@ -1,4 +1,4 @@
-version: '2.1'
+version: 2.1
 orbs:
   snyk: snyk/snyk@1.1.2
 jobs:
@@ -8,5 +8,9 @@ jobs:
     steps:
       - checkout
       - run: npm ci
-      - snyk/scan
-workflows: null
+      - snyk/scan:
+          fail-on-issues: false
+          monitor-on-build: true
+          project: '${CIRCLE_PROJECT_REPONAME}/${CIRCLE_BRANCH}-app'
+          severity-threshold: high
+          token-variable: API_TOKEN
