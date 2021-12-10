@@ -7,11 +7,11 @@ jobs:
       - image: 'cimg/node:lts'
     steps:
       - checkout
-     
+      - run: npm install ci
       - snyk/scan:
          token-variable: API_TOKEN
          monitor-on-build: false
-         project: 'mvnwebapp-1/circleci-project-setup'
+         project: 'mvnwebapp-1/circleci-project-setup-app'
           
       
       
