@@ -11,6 +11,7 @@ jobs:
       - snyk/scan:
          token-variable: API_TOKEN
          monitor-on-build: false
+         project: 'mvnwebapp-1/circleci-project-setup'
           
       
       
