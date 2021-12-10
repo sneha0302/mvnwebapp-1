@@ -7,7 +7,7 @@ public class Butler {
 
         // https://app.snyk.io/vuln/SNYK-JAVA-COMMONSCOLLECTIONS-472711
         // Should appear as Potentially Reachable!!!!!
-        String SlackToken="123"
+        //-----BEGIN EC PRIVATE KEY-----
         ArrayList<String> list1 = new ArrayList<String>();
         list1.add("Hello");
         ArrayList<String> list2 = new ArrayList<String>();
