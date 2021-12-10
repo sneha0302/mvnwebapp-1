@@ -12,6 +12,6 @@ jobs:
     steps:
     - uses: actions/checkout@v2
       with:
-        fetch-depth: 0
+        fetch-depth: 0 #to fetch all history of all branches 
     - name: trufflehog-actions-scan
       uses: edplato/trufflehog-actions-scan@master
