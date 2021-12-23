@@ -11,7 +11,8 @@ jobs:
       - snyk/scan:
          token-variable: API_TOKEN
          monitor-on-build: false
-         target-file: /home/circleci/project/mvnwebapp-1/circleci-project-setup/pom.xml
+         project: 'mvnwebapp-1/circle-project-setup'
+         target-file: '/pom.xml'
 workflows: 
   version: 2
   Snyk Scan:
