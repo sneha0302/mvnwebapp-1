@@ -7,7 +7,7 @@ on:
     branches: [ master ]
 
 jobs:
-  archive-build-artifacts:
+  snyk-scan:
     runs-on: ubuntu-latest
 
     steps:
