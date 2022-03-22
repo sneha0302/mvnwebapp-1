@@ -31,7 +31,7 @@ jobs:
       - run: snyk monitor
 
         # Generate the HTML report
-      - name: install snyk-to-html
+      - name: Run snyk test and install snyk-to-html
         run: | 
          npm install snyk-to-html -g
                # Convert JSON output from `snyk test --json` into a static HTML
