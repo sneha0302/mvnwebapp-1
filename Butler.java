@@ -6,7 +6,7 @@ public class Butler {
     public void welcome() {
 
         // https://app.snyk.io/vuln/SNYK-JAVA-COMMONSCOLLECTIONS-472711
-        // Should appear as Potentially Reachable!!!!!!!!
+        // Should appear as Potentially Reachable!!!!!!!!!
         //-----BEGIN EC PRIVATE KEY-----
         ArrayList<String> list1 = new ArrayList<String>();
         list1.add("Hello");
