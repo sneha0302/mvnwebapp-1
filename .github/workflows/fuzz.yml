@@ -1,6 +1,5 @@
 name: ClusterFuzzLite continuous builds
-on:push
-  
+on: push 
 permissions: read-all
 jobs:
   Build:
