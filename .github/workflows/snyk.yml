@@ -32,19 +32,19 @@ jobs:
 
         # Generate the HTML report
       - name: Run snyk test and install snyk-to-html
-        run: snyk test --json --json-file-output=result.json  #| 
-         #npm install snyk-to-html -g
+        run: | 
+         npm install snyk-to-html -g
                #Convert JSON output from `snyk test --json` into a static HTML
            
-         #snyk test --json | snyk-to-html -o result.html
-         #mkdir downloads
-         #pwd
-         #cp -v /home/runner/*/*/*/*.html /home/runner/work/*/*/downloads
+         snyk test --json | snyk-to-html -o result.html
+         mkdir downloads
+         pwd
+         cp -v /home/runner/*/*/*/*.html /home/runner/work/*/*/downloads
 
       # save the HTML in the artifact
       - name: Use the Upload Artifact GitHub Action
         uses: actions/upload-artifact@v2
         with:
           name: results
-          path: /home/runner/*/*/*/*.json
-          #path: downloads
+          #path: /home/runner/*/*/*/*.json
+          path: downloads
