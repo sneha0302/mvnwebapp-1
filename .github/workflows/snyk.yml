@@ -32,7 +32,7 @@ jobs:
 
         # Generate the HTML report
       - name: Run snyk test and install snyk-to-html
-        run: snyk test --json-file-output = result.json  #| 
+        run: snyk test --json --json-file-output=result.json  #| 
          #npm install snyk-to-html -g
                #Convert JSON output from `snyk test --json` into a static HTML
            
