@@ -21,7 +21,7 @@ jobs:
         run: mvn -B package --file pom.xml
       - name: run MVN install
         run: |
-          cd mvnwebapp-1 
+          #cd mvnwebapp-1 
           mvn install # install maven
 
       - uses: actions/setup-node@v2
