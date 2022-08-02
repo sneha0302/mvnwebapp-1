@@ -2,9 +2,7 @@ name: CodeQL Scan
 
 on:
   push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
+    
 
 jobs:
   CodeQL-Build:
@@ -41,6 +39,7 @@ jobs:
 
       - name: Build with Maven
         run: mvn -B package --file pom.xml
+        
       - name: run MVN install
         run: |
           #cd mvnwebapp-1 
