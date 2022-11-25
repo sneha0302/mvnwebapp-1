@@ -1,14 +1,15 @@
-name: sample workflow
+name: Sample
 
-on:
+on: 
  push:
  
 jobs:
- build:
+ build-code:
   runs-on: ubuntu-latest
-  name: Echo 
-  steps:
-     - name: Say hello
-       run: |
-        echo "hello world"
-        ls -la
+  name: Echo
+  steps: 
+   - name: say hi
+     run : |
+      echo 'hello'
+      pwd
+   
