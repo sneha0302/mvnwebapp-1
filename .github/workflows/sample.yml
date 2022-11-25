@@ -6,9 +6,9 @@ on:
 jobs:
  build:
   runs-on: ubuntu-latest
-  name: Scan the webapplication
+  name: Echo 
   steps:
      - name: Say hello
-       run: 
+       run: |
         echo "hello world"
         ls -la
