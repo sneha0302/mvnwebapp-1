@@ -1,1 +1,14 @@
-test
+name: sample workflow
+
+on:
+ push:
+ 
+jobs:
+ build:
+  runs-on: ubuntu-latest
+  name: Scan the webapplication
+  steps:
+     - name: Say hello
+       run: 
+        echo "hello world"
+        ls -la
