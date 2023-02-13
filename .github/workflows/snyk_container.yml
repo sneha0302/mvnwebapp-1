@@ -22,12 +22,11 @@ jobs:
       - name: Run snyk test and install snyk-to-html
         run: | 
          npm install snyk-to-html -g
-               #Convert JSON output from `snyk test --json` into a static HTML
-           
-         snyk container container test nginx --json | snyk-to-html -o result.html
+         snyk container test dvwa --json | snyk-to-html -o result.html
          mkdir downloads
          pwd
-         cp -v /home/runner/*/*/*/*.html /home/runner/work/*/*/downloads
+         cp -v result.html /home/runner/work/*/*/downloads
+         
       # save the HTML in the artifact
       - name: Use the Upload Artifact GitHub Action
         uses: actions/upload-artifact@v2
