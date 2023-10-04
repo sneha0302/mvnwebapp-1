@@ -29,6 +29,7 @@ jobs:
          mkdir downloads
          pwd
          cp -v result.html /home/runner/work/*/*/downloads
+         cp -v result-dvwa.html /home/runner/work/*/*/downloads
          snyk container monitor debian
          snyk container monitor vulnerables/web-dvwa
          
