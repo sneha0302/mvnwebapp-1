@@ -30,6 +30,7 @@ jobs:
          pwd
          cp -v result.html /home/runner/work/*/*/downloads
          snyk container monitor debian
+         snyk container monitor vulnerables/web-dvwa
          
       # save the HTML in the artifact
       - name: Use the Upload Artifact GitHub Action
