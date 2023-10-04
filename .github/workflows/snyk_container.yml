@@ -25,6 +25,7 @@ jobs:
          npm install snyk-to-html -g
          echo "Run snyk scan"
          snyk container test debian --json | snyk-to-html -o result.html
+         snyk container test vulnerables/web-dvwa --json | snyk-to-html -o result-dvwa.html
          mkdir downloads
          pwd
          cp -v result.html /home/runner/work/*/*/downloads
