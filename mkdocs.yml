@@ -1,0 +1,124 @@
+site_name: DevOps Security Capability
+site_url: https://devopssec.engineering.mnscorp.net
+repo_url: https://github.com/DigitalInnovation/security
+edit_uri: 'tree/main/docs'
+plugins:  
+  #- table-reader
+  #- glightbox
+  #- mkdocs-video
+  - search:
+      separator: '[\s\-,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
+  #- awesome-pages
+  #- git-committers:
+  #    repository: DigitalInnovation/security
+  #    branch: main
+copyright: >
+  Copyright &copy; M&S AppSec
+extra_css:
+  - css/customs.css
+theme:
+  features:
+    - navigation.tracking
+    - navigation.indexes
+    - navigation.top
+    - navigation.footer
+    - content.code.copy
+    - navigation.footer
+  name: material
+  logo: Logo/MS-Logo.png
+  favicon: Logo/M&S-Logo.svg
+  palette:
+    - scheme: default
+      primary: blue grey
+      accent: blue grey
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: blue grey
+      accent: blue grey
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode    
+  language: en     
+markdown_extensions:
+  - tables
+  - attr_list
+  - md_in_html
+  - pymdownx.details
+  - admonition
+  - pymdownx.superfences
+  - toc:
+        permalink: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true         
+extra:
+  version:
+    provider: mike
+
+# Page tree
+nav:
+  - Home: index.md
+  - Products:
+  #  - Products/index.md
+    - Semgrep Code:
+    #  - Products/Semgrep-Code/index.md
+      - What problem it solves : Products/Semgrep-Code/what-problem-it-solves.md
+      - What is supported : Products/Semgrep-Code/what-is-supported.md
+      - How to get access : Products/Semgrep-Code/how-to-get-access.md
+      - Getting started : Products/Semgrep-Code/getting-started.md
+      - How to Integrate : 
+      #  - Products/Semgrep-Code/CI-Integration/index.md
+      #  - CLI Scans : Products/Semgrep-Code/CI-Integration/cli-scan.md
+      #   - IDE Plugin : Products/Semgrep-Code/CI-Integration/ide-plugin.md
+        - Github Action : Products/Semgrep-Code/CI-Integration/githubaction.md
+        - Azure Devops Pipelines: Products/Semgrep-Code/CI-Integration/azure-devops-pipeline.md
+     #   - Jenkins : Products/Semgrep-Code/CI-Integration/jenkins.md
+      - How to view results : Products/Semgrep-Code/how-to-view-results.md
+      - Prioritising and fixing results : Products/Semgrep-Code/prioritising-and-fixing-results.md
+      - Guardrails : Products/Semgrep-Code/guardrails.md
+      - FAQ: Products/Semgrep-Code/faq.md 
+    - Snyk Open Source:
+     # - Products/Snyk-Open-Source/index.md
+      - What problem it solves : Products/Snyk-Open-Source/what-problem-it-solves.md
+      - What is supported : Products/Snyk-Open-Source/what-is-supported.md
+      - Getting started : Products/Snyk-Open-Source/getting-started.md
+      - How to get access : Products/Snyk-Open-Source/how-to-get-access.md
+      - SCM Integration : 
+        - Github SCM Integration : Products/Snyk-Open-Source/SCM-Integration/Github-integration.md 
+      #  - Azure SCM Integration: Products/Snyk-Open-Source/SCM-Integration/Azure-integration.md
+      - How to Integrate : 
+      #  - Products/Snyk-Open-Source/CI-Integration/index.md
+        - Github Action : Products/Snyk-Open-Source/CI-Integration/githubaction.md
+        - Azure Devops Pipeline: Products/Snyk-Open-Source/CI-Integration/azure-devops-pipeline.md
+        - Jenkins : Products/Snyk-Open-Source/CI-Integration/jenkins.md
+      - How to view results : Products/Snyk-Open-Source/how-to-view-results.md
+      - Prioritising and fixing results: Products/Snyk-Open-Source/Prioritising-and-Fixing-result.md
+      - Guardrails : Products/Snyk-Open-Source/guardrails.md
+      - FAQ: Products/Snyk-Open-Source/faq.md    
+    #- Trufflehog Secrets:
+    #  - Products/Trufflehog-Secrets/index.md
+    #  - What problem it solves : Products/Trufflehog-Secrets/what-problem-it-solves.md
+    #  - What is supported : Products/Trufflehog-Secrets/what-is-supported.md
+    #  - Getting started : Products/Trufflehog-Secrets/getting-started.md
+    #  - How to get access : Products/Trufflehog-Secrets/how-to-get-access.md
+    #  - How to Integrate : 
+    #    - Products/Trufflehog-Secrets/CI-Integration/index.md
+    #    - Github Action : Products/Trufflehog-Secrets/CI-Integration/githubaction.md
+    #    - Azure Devops Pipeline: Products/Trufflehog-Secrets/CI-Integration/azure-devops-pipeline.md
+    #    - Jenkins : Products/Trufflehog-Secrets/CI-Integration/jenkins.md
+    #  - How to view results : Products/Trufflehog-Secrets/how-to-view-results.md
+    #  - Prioritising and fixing results : Products/Trufflehog-Secrets/prioritising-and-fixing-results.md
+    #  - Guardrails: Products/Trufflehog-Secrets/guardrails.md
+    #  - FAQ: Products/Trufflehog-Secrets/faq.md
+    #- Fortify On Demand(FOD): Products/Fortify-on-Demand(FOD)/offboarding-guide.md    
+  - Support: Support/index.md
+  - About Us: About-us/index.md
+  - Releases : release/release_notes.md
