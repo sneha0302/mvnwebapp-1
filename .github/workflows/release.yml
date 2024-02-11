@@ -1,0 +1,32 @@
+name: Update Release Notes
+
+on:
+  release:
+    types:
+      - published
+
+
+jobs:
+  update-wiki:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Generate Release Notes
+        run: |
+          # Add commands to generate your release notes
+          # For example, you might use a script or a tool like conventional-changelog
+          echo "## Release Notes" > release-logs.md
+          echo "### Version ${{ github.event.release.tag_name }}" >> release-logs.md
+          echo "${{ github.event.release.body }}" >> release-logs.md
+
+      - name: Update Wiki
+        run: |
+          # Replace 'YourWikiPage' with the actual page name in your wiki
+          echo "::set-env name=WIKI_PAGE::YourWikiPage"
+          echo "::set-env name=RELEASE_NOTES::$(cat release_notes.md)"
+        uses: greg-1-anderson/make-wiki-page@v1
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
